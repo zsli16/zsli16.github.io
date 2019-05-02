@@ -1,135 +1,210 @@
-/*base code*/
-.animated {
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
+@import url('https://fonts.googleapis.com/css?family=Roboto:100:300,500,800');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  color: white;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.button {
+  background: none;
+  border: .5px solid #f9cb77;
+  border-radius: 3px;
+  display: inline-block;
+  max-width: 175px;
+  padding: 15px 25px;
+  margin-right: 10px;
+}
+
+.button a {
+  text-decoration: none;
+  color: #f9cb77;
+  font-weight: 300;
+}
+
+.button a:hover {
+  text-decoration: underline;
+}
+
+.button a:hover::after {
+  content: ' →'
+}
+
+h1 {
+  font-size: 3em;
+  justify-self: flex-start;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 2em;
+  margin: 0 auto;
+}
+
+p {
+  font-weight: 100;
+  line-height: 1.5;
+}
+
+.feature {
+  font-weight: 500;
+  color: white; 
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+section {
+  flex: 1;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  background: rgb(26,0,103);
+  padding: 1rem;
+  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(15,213,172,1) 0%, rgba(34,182,198,1) 100.2% );
+}
+
+.right {
+  background: black;
+  color: white;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.media {
+  text-align: center;
+  vertical-align: middle;
+  padding: 20px;
+}
+
+img {
+  max-width: 600px;
+  width: 100%; 
+  max-height: 600px; 
+  height: auto;
+}
+
+#profile {
+  border-radius: 50%;
+  vertical-align: middle;
+  box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.3);
+}
+
+.social {
+  margin: 1em;
+  text-align: center;
+}
+
+i {
+  padding: 5px;
+  font-size: 2em !important;
+  color: white;
+  opacity: .75;
+  cursor: pointer;
+}
+
+i:hover {
+  opacity: 1;
+}
+
+
+@media (max-width: 1400px) {
+  #profile {
+    width: 50%;
   }
-  .animated.infinite {
-    -webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
-  }
-  .animated.hinge {
-    -webkit-animation-duration: 2s;
-    animation-duration: 2s;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
   }
 
-  /*Slide In Left*/
-  @-webkit-keyframes slideInLeft {
-    0% {
-      -webkit-transform: translate3d(-100%, 0, 0);
-      transform: translate3d(-100%, 0, 0);
-      visibility: visible
-    }
-    100% {
-      -webkit-transform: translate3d(0, 0, 0);
-      transform: translate3d(0, 0, 0)
-    }
-  }
-  @keyframes slideInLeft {
-    0% {
-      -webkit-transform: translate3d(-100%, 0, 0);
-      -ms-transform: translate3d(-100%, 0, 0);
-      transform: translate3d(-100%, 0, 0);
-      visibility: visible
-    }
-    100% {
-      -webkit-transform: translate3d(0, 0, 0);
-      -ms-transform: translate3d(0, 0, 0);
-      transform: translate3d(0, 0, 0)
-    }
-  }
-  .slideInLeft {
-    -webkit-animation-name: slideInLeft;
-    animation-name: slideInLeft
+  h1 {
+    font-size: 2em;
   }
 
-/*Slide In Right*/
-@-webkit-keyframes slideInRight {
-    0% {
-      -webkit-transform: translate3d(100%, 0, 0);
-      transform: translate3d(100%, 0, 0);
-      visibility: visible
-    }
-    100% {
-      -webkit-transform: translate3d(0, 0, 0);
-      transform: translate3d(0, 0, 0)
-    }
-  }
-  @keyframes slideInRight {
-    0% {
-      -webkit-transform: translate3d(100%, 0, 0);
-      -ms-transform: translate3d(100%, 0, 0);
-      transform: translate3d(100%, 0, 0);
-      visibility: visible
-    }
-    100% {
-      -webkit-transform: translate3d(0, 0, 0);
-      -ms-transform: translate3d(0, 0, 0);
-      transform: translate3d(0, 0, 0)
-    }
-  }
-  .slideInRight {
-    -webkit-animation-name: slideInRight;
-    animation-name: slideInRight
-  }
-  
-  /*Slide Out Right*/
-  @-webkit-keyframes slideOutRight {
-    0% {
-      -webkit-transform: translate3d(0, 0, 0);
-      transform: translate3d(0, 0, 0)
-    }
-    100% {
-      visibility: hidden;
-      -webkit-transform: translate3d(100%, 0, 0);
-      transform: translate3d(100%, 0, 0)
-    }
-  }
-  @keyframes slideOutRight {
-    0% {
-      -webkit-transform: translate3d(0, 0, 0);
-      -ms-transform: translate3d(0, 0, 0);
-      transform: translate3d(0, 0, 0)
-    }
-    100% {
-      visibility: hidden;
-      -webkit-transform: translate3d(100%, 0, 0);
-      -ms-transform: translate3d(100%, 0, 0);
-      transform: translate3d(100%, 0, 0)
-    }
-  }
-  .slideOutRight {
-    -webkit-animation-name: slideOutRight;
-    animation-name: slideOutRight
+  .right {
+    flex: 2;
+    padding: 3rem;
+    display: block;
   }
 
-/*Slide Out Left*/
-  @-webkit-keyframes slideOutLeft {
-    0% {
-      -webkit-transform: translate3d(0, 0, 0);
-      transform: translate3d(0, 0, 0)
-    }
-    100% {
-      visibility: hidden;
-      -webkit-transform: translate3d(-100%, 0, 0);
-      transform: translate3d(-100%, 0, 0)
-    }
+  #profile {
+    width: 20%;
+    margin-top: 30px;
   }
-  @keyframes slideOutLeft {
-    0% {
-      -webkit-transform: translate3d(0, 0, 0);
-      -ms-transform: translate3d(0, 0, 0);
-      transform: translate3d(0, 0, 0)
-    }
-    100% {
-      visibility: hidden;
-      -webkit-transform: translate3d(-100%, 0, 0);
-      -ms-transform: translate3d(-100%, 0, 0);
-      transform: translate3d(-100%, 0, 0)
-    }
+
+  .social {
+    margin: .5em;
+    margin-bottom: 30px;
   }
-  .slideOutLeft {
-    -webkit-animation-name: slideOutLeft;
-    animation-name: slideOutLeft
+
+  i {
+    font-size: 1.5em !important;
   }
+
+
+}
+
+@media (max-width: 460px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .right {
+    flex: 3;
+    padding: 2em;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  h2 {
+    font-size: 1em;
+  }
+
+  #profile {
+    margin-top: 10px;
+    width: 30%;
+  }
+
+  .social {
+    margin-bottom: 10px;
+  }
+
+  i {
+    font-size: .5em;
+    padding: 2px;
+  }
+
+}

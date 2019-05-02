@@ -5,26 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="styles.css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   
 	<body>
-    <section class="left">
-      <div class="circle">
-        <div class="circle-icon">
+    <div class="container">
+      <section class="left">
+        <div class="media">
+          <img src="profile.jpg" alt="profile-pic" id="profile">
+          <div class="social">
+            <i class="fa fa-linkedin" ></i>
+            <i class="fa fa-github" ></i>
+            <i class="fa fa-envelope" ></i>
+          </div>
         </div>
-        <div class="circle-info"></div>
-      </div>
-    </section>      
-    <section class="right">
+      </section>      
+      <section class="right">
         <h1>Hi, I'm Sue.</h1>
-        <h2>I Design, Develop, and Launch Products.</h2>
+        <h2 class="typewriter">I Design, Develop, and Launch Products.</h2>
         <div class="intro">
           <p>I love start-ups, design sprints, and bringing new products to the market.
-              I’ve worked on photobook creation software, ed-tech products, and a children’s gaming platform.</p>
+              I’ve worked on <a href="https://www.bonusprint.co.uk">photobook creation software,</a>
+              <a href="https://www.bomberbot.com">ed-tech products,</a> and an
+              <a href="https://www.poki.com">online gaming platform.</a></p>
           <p>I’m also a full-stack Javascript developer with experience in React, Redux, and Node.</p> 
           <p>In my spare time I like to travel, surf, and eat tapas.</p>
         </div>
-    </section>
+        <div class="projects">
+          <p class="feature">Check out my latest projects!</p>
+          <div class="button"><a href="http://yumlist.io">yumlist.io</a></div>
+          <div class="button"><a href="https://jsq-client.herokuapp.com">JS Questions</a></div>
+        </div>
+      </section>
+    </div>
   
   </body>
 </html>
