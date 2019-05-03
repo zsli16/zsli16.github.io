@@ -209,12 +209,14 @@ i:hover {
   }
 
   .left {
-    height: 300px;
+    height: 600px;
+    width: 100vw;
   }
 
   .right {
-    flex: 3;
+    display: block;
     padding: 2.3em;
+    width: 100vw;
   }
 
   h1 {
