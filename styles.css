@@ -64,7 +64,7 @@ li a:hover::after {
 h1 {
   font-size: 3em;
   justify-self: flex-start;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
   margin-top: 0px;
 }
 
@@ -84,7 +84,12 @@ p {
   line-height: 1.8;
 }
 
+.intro {
+  max-width: 90%;
+}
+
 .feature {
+  margin-top: 0px;
   font-weight: 500;
   color: white; 
 }
@@ -115,7 +120,7 @@ section {
 .right {
   background: black;
   color: white;
-  padding: 3rem;
+  padding: 4rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -163,7 +168,7 @@ i:hover {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .container {
     flex-direction: column;
   }
@@ -172,6 +177,10 @@ i:hover {
     flex: 2;
     padding: 3.5rem;
     display: block;
+  }
+
+  .intro {
+    max-width: 100%;
   }
 
   #profile {
