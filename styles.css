@@ -242,11 +242,12 @@ i:hover {
   }
 
   .social {
+    margin: .5em;
     margin-bottom: 10px;
   }
 
   i {
-    font-size: .5em;
+    font-size: 1.2em !important;
     padding: 2px 5px;
   }
 
