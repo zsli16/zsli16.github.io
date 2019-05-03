@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-body {
+html, body {
   margin: 0;
   padding: 0;
   width: 100vw;
@@ -206,6 +206,10 @@ i:hover {
 @media (max-width: 460px) {
   .container {
     flex-direction: column;
+  }
+
+  .left {
+    height: 300px;
   }
 
   .right {
