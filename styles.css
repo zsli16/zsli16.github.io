@@ -216,6 +216,11 @@ i:hover {
   .right {
     padding: 2.3em;
     width: 100vw;
+    padding-right: 1em;
+  }
+
+  .intro {
+    width: 100%;
   }
 
   h1 {
