@@ -40,7 +40,6 @@ li {
 }
 
 li a {
-  text-decoration: none;
   color: #f9cb77;
   font-weight: 300;
 }
@@ -53,7 +52,7 @@ li:before {
 }
 
 li a:hover {
-  text-decoration: underline;
+  text-decoration: none;
   font-weight: 300;
 }
 
@@ -211,6 +210,8 @@ i:hover {
   .left {
     height: 600px;
     width: 100vw;
+    position: fixed;
+    top: 0;
   }
 
   .right {
