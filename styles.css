@@ -204,20 +204,18 @@ i:hover {
 
 @media (max-width: 460px) {
   .container {
+    display: flex;
     flex-direction: column;
   }
 
   .left {
-    height: 600px;
-    width: 100vw;
-    position: fixed;
-    top: 0;
+    flex: 1;
   }
 
   .right {
-    display: block;
     padding: 2.3em;
     width: 100vw;
+    flex: 2;
   }
 
   h1 {
