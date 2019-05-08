@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-body {
+html, body {
   margin: 0;
   padding: 0;
   width: 100vw;
@@ -14,10 +14,15 @@ body {
 
 a {
   color: white;
+  border-bottom: .5px solid white;
+  text-decoration: none;
+  display: inline-block;
+  line-height: 1.75;
 }
 
 a:hover {
-  text-decoration: none;
+  border-bottom: 0px; 
+  transition: 2s;
 }
 
 .button {
@@ -30,24 +35,45 @@ a:hover {
   margin-right: 10px;
 }
 
-.button a {
-  text-decoration: none;
+ul {
+  padding-left: 20px;
+  list-style: none;
+}
+
+li {
+  padding: 2px 0px;
+}
+
+li a {
   color: #f9cb77;
+  font-weight: 300;
+  border-bottom: .5px solid #f9cb77;
+}
+
+li:before {
+  content: '◇';
+  color: #f9cb77;
+  margin-left: -20px;
+  margin-right: 10px;
+}
+
+li a:hover {
+  text-decoration: none;
   font-weight: 300;
 }
 
-.button a:hover {
-  text-decoration: underline;
+.social a {
+  border-bottom: none;
 }
 
-.button a:hover::after {
+li a:hover::after {
   content: ' →'
 }
 
 h1 {
   font-size: 3em;
   justify-self: flex-start;
-  margin-bottom: 0px;
+  margin-bottom: 16px;
   margin-top: 0px;
 }
 
@@ -64,10 +90,15 @@ h2 {
 
 p {
   font-weight: 100;
-  line-height: 1.5;
+  line-height: 1.8;
+}
+
+.intro {
+  max-width: 90%;
 }
 
 .feature {
+  margin-top: 0px;
   font-weight: 500;
   color: white; 
 }
@@ -83,18 +114,23 @@ section {
 
 .left {
   display: flex;
+  min-height: 250px;
   flex-direction: column;
   justify-content: center;
   position: relative;
   background: rgb(26,0,103);
-  padding: 1rem;
+  padding: 2rem;
   background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(15,213,172,1) 0%, rgba(34,182,198,1) 100.2% );
+}
+
+.feature {
+  font-weight: 800;
 }
 
 .right {
   background: black;
   color: white;
-  padding: 3rem;
+  padding: 4rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -103,7 +139,6 @@ section {
 .media {
   text-align: center;
   vertical-align: middle;
-  padding: 20px;
 }
 
 img {
@@ -143,24 +178,25 @@ i:hover {
   }
 }
 
-@media (max-width: 768px) {
+@media (min-width: 460px) and (max-width: 900px) {
   .container {
     flex-direction: column;
   }
 
-  h1 {
-    font-size: 2em;
-  }
-
   .right {
     flex: 2;
-    padding: 3rem;
+    padding: 3.5rem;
     display: block;
+  }
+
+  .intro {
+    max-width: 100%;
   }
 
   #profile {
     width: 20%;
     margin-top: 30px;
+    min-width: 150px;
   }
 
   .social {
@@ -172,39 +208,59 @@ i:hover {
     font-size: 1.5em !important;
   }
 
+  h1 {
+    font-size: 2.5em;
+  }
 
 }
 
 @media (max-width: 460px) {
+
   .container {
-    flex-direction: column;
+    display: block;
+    width: 100vw;
+  }
+
+  .left {
+    height: 30%;
   }
 
   .right {
-    flex: 3;
-    padding: 2em;
+    padding: 2.3em;
+    width: 100vw;
+    padding-right: 1em;
+  }
+
+  .intro {
+    width: 100%;
   }
 
   h1 {
     font-size: 1.5em;
+    margin-bottom: 8px;
   }
 
   h2 {
-    font-size: 1em;
+    font-size: 1.3em;
+  }
+
+  p {
+    line-height: 1.5em;
   }
 
   #profile {
     margin-top: 10px;
-    width: 30%;
+    width: 40%;
   }
 
   .social {
+    margin: .5em;
     margin-bottom: 10px;
   }
 
   i {
-    font-size: .5em;
-    padding: 2px;
+    font-size: 18px !important;
+    padding: 2px 5px;
   }
 
 }
